@@ -1,26 +1,40 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+# Node.js dependencies
 node_modules/
+Frontend/node_modules/
+Backend/node_modules/
+
+# Dependency caches
+.npm/
 .cache/
 /.pnp
 .pnp.js
 
-# testing
-/coverage
+# Testing coverage reports
+/coverage/
 
-# production
-/build
+# Production build
+/build/
+Frontend/build/
+Backend/build/
 
-# misc
-.DS_Store
+# Environment variables
+.env
 .env.local
+.env.development
 .env.development.local
-.env.test.local
+.env.test
+.env.production
 .env.production.local
 
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-Frontend/node_modules
-Backend/node_modules
+
+# Miscellaneous system files
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore
+docker-compose.override.yml
