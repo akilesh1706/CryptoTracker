@@ -1,11 +1,12 @@
 const redis = require('redis');
+require('dotenv').config();
 
 const redisClient = redis.createClient({
     // host: '127.0.0.1',
     // port: 6379,
 
     //url: 'redis://127.0.0.1:6379',
-    url: 'redis://redisdb:6379',
+    url: process.env.REDIS_URI,
 });
 
 redisClient.on('connect', () => {
