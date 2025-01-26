@@ -23,7 +23,7 @@ const Cryptocurrencies = ({ simplified }) => {
 
   const handleAddToDB = async(currency) => {
     try {
-      const response = await fetch('http://localhost:5000/api/currencies', {
+      const response = await fetch('http://54.169.245.223:5000/api/currencies', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -41,7 +41,7 @@ const Cryptocurrencies = ({ simplified }) => {
   };
   const handleDeleteFromDB = async(currency) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/currencies/${currency.uuid}`, {
+      const response = await fetch(`http://54.169.245.223:5000/api/currencies/${currency.uuid}`, {
         method: 'DELETE',
       });
       if(!response.ok) throw new Error('Failed to delete cryptocurrency');
