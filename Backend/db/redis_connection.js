@@ -6,7 +6,7 @@ const redisClient = redis.createClient({
     // port: 6379,
 
     //url: 'redis://127.0.0.1:6379',
-    url: 'redis://redisdb:6379',
+    url: 'redis://54.255.191.212:6379',
 });
 
 redisClient.on('connect', () => {
