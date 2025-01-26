@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectToMongoDB = async() => {
     try {
-        await mongoose.connect(process.env.MONGO_URI, {
+        await mongoose.connect('mongodb://root:example@13.229.81.168:27017/CryptoDB_Collection?authSource=admin', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
